@@ -4,6 +4,7 @@ A bank/NBFC receives thousands of loan applications. The objective is to predict
 
 # Business objective: Build a machine-learning system that predicts:
 
+
 Loan Applicant
       ↓
 Credit / Financial Information
@@ -19,3 +20,43 @@ Probability of Default
 Risk Classification
       ↓
 LOW / MEDIUM / HIGH RISK
+----------------------------------------------------------------------------------------------------------------------------------
+
+                    CREDIT RISK PREDICTION
+                             │
+             ┌───────────────┴───────────────┐
+             ↓                               ↓
+       Customer Data                   Loan Data
+             │                               │
+             └───────────────┬───────────────┘
+                             ↓
+                       SQL DATABASE
+                             ↓
+                    Data Extraction
+                             ↓
+                         Python
+                             ↓
+                  Data Cleaning & EDA
+                             ↓
+                    Feature Engineering
+                             ↓
+                 Train / Validation / Test
+                             ↓
+              ┌──────────────┴──────────────┐
+              ↓                             ↓
+       Logistic Regression             Random Forest
+              ↓                             ↓
+         XGBoost / LightGBM (optional)
+              └──────────────┬──────────────┘
+                             ↓
+                    Model Evaluation
+                             ↓
+              Probability of Default
+                             ↓
+                    Risk Classification
+                             ↓
+            ┌────────────────┴───────────────┐
+            ↓                                ↓
+       Streamlit App                    Power BI
+            ↓                                ↓
+     Credit Prediction             Portfolio Analytics
